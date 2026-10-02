@@ -88,3 +88,25 @@ SkillSwap/
 │
 ├── .gitignore
 └── README.md
+## 📸 Screenshots
+
+### 🏠 Home
+![SkillSwap Home](screenshots/home.png)
+
+### 🔐 Login
+![SkillSwap Login](screenshots/login.png)
+
+### 📊 Dashboard
+![SkillSwap Dashboard](screenshots/dashboard.png)
+
+### 📚 Skills
+![SkillSwap Skills](screenshots/skills.png)
+
+### 🤝 Matches
+![SkillSwap Matches](screenshots/matches.png)
+
+### 📩 Requests
+![SkillSwap Requests](screenshots/requests.png)
+
+### 👤 Profile
+![SkillSwap Profile](screenshots/profile.png)
