@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skill Matches - SkillSwap</title>
+
+    <link rel="stylesheet" href="css/matches.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Skill<span>Swap</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="skills.html">My Skills</a>
+            <a href="matches.html">Matches</a>
+            <a href="requests.html">Requests</a>
+            <a href="profile.html">Profile</a>
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">
+            Logout
+        </button>
+
+    </nav>
+
+
+    <!-- Main -->
+
+    <main class="matches-container">
+
+        <div class="page-header">
+
+            <p class="small-text">SKILL DISCOVERY</p>
+
+            <h1>Find Your Skill Matches</h1>
+
+            <p>
+                Connect with students who can teach
+                what you want to learn and learn what
+                you can teach.
+            </p>
+
+        </div>
+
+
+        <!-- Matches -->
+
+        <section id="matchesContainer" class="matches-list">
+
+            <div class="loading">
+                Finding your skill matches...
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/matches.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - SkillSwap</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Skill<span>Swap</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="skills.html">
+                Explore Skills
+            </a>
+
+            <a href="matches.html">
+                Matches
+            </a>
+
+            <a href="requests.html">
+                Requests
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">
+            Logout
+        </button>
+
+    </nav>
+
+
+    <!-- ================= MAIN DASHBOARD ================= -->
+
+    <main class="dashboard-container">
+
+
+        <!-- ================= WELCOME ================= -->
+
+        <section class="welcome-section">
+
+            <div>
+
+                <p class="small-text">
+                    WELCOME BACK 👋
+                </p>
+
+                <h1>
+                    Hello,
+                    <span id="userName">
+                        Student
+                    </span>!
+                </h1>
+
+                <p>
+                    Exchange skills, connect with students,
+                    and grow together.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats">
+
+
+            <div class="stat-card">
+
+                <h2 id="teachingCount">
+                    0
+                </h2>
+
+                <p>
+                    Skills Teaching
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h2 id="learningCount">
+                    0
+                </h2>
+
+                <p>
+                    Skills Learning
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h2 id="matchesCount">
+                    0
+                </h2>
+
+                <p>
+                    Matches
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h2 id="requestsCount">
+                    0
+                </h2>
+
+                <p>
+                    Requests
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="quick-section">
+
+            <h2>
+                Quick Actions
+            </h2>
+
+
+            <div class="action-grid">
+
+
+                <!-- Add Skills -->
+
+                <a
+                    href="skills.html"
+                    class="action-card"
+                >
+
+                    <div class="icon">
+                        ➕
+                    </div>
+
+                    <h3>
+                        Add Your Skills
+                    </h3>
+
+                    <p>
+                        Tell others what you can teach
+                        and what you want to learn.
+                    </p>
+
+                </a>
+
+
+                <!-- Find Matches -->
+
+                <a
+                    href="matches.html"
+                    class="action-card"
+                >
+
+                    <div class="icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Find Skill Matches
+                    </h3>
+
+                    <p>
+                        Discover students who can
+                        exchange skills with you.
+                    </p>
+
+                </a>
+
+
+                <!-- Requests -->
+
+                <a
+                    href="requests.html"
+                    class="action-card"
+                >
+
+                    <div class="icon">
+                        📩
+                    </div>
+
+                    <h3>
+                        View Requests
+                    </h3>
+
+                    <p>
+                        Check your incoming and
+                        outgoing exchange requests.
+                    </p>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GETTING STARTED ================= -->
+
+        <section class="getting-started">
+
+            <h2>
+                Get Started
+            </h2>
+
+            <p>
+                Start by adding the skills you can teach
+                and the skills you want to learn.
+            </p>
+
+            <a
+                href="skills.html"
+                class="primary-btn"
+            >
+                Add Skills →
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

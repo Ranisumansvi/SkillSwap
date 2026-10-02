@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+    border-bottom: 1px solid #e5e7eb;
+    gap: 40px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #6c63ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    flex: 1;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #6c63ff;
+}
+
+.logout-btn {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* ================= MAIN ================= */
+
+.matches-container {
+    width: 86%;
+    max-width: 1100px;
+    margin: 45px auto;
+}
+
+.page-header {
+    margin-bottom: 35px;
+}
+
+.small-text {
+    color: #6c63ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.page-header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+
+/* ================= MATCH CARDS ================= */
+
+.matches-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.match-card {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+}
+
+.match-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #6c63ff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.match-header h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.match-header p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.exchange-box {
+    background: #f8f8ff;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.exchange-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.exchange-label {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.exchange-skill {
+    color: #574fe8;
+    font-weight: bold;
+}
+
+.request-btn {
+    width: 100%;
+    padding: 12px;
+    background: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.request-btn:hover {
+    background: #574fe8;
+}
+
+
+/* ================= EMPTY / LOADING ================= */
+
+.loading,
+.no-matches {
+    grid-column: 1 / -1;
+    background: white;
+    padding: 50px;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+}
+
+.no-matches h2 {
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 750px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .matches-container {
+        width: 92%;
+    }
+
+    .matches-list {
+        grid-template-columns: 1fr;
+    }
+
+}

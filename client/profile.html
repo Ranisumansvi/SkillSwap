@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile - SkillSwap</title>
+
+    <link rel="stylesheet" href="css/profile.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Skill<span>Swap</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="skills.html">My Skills</a>
+
+            <a href="matches.html">Matches</a>
+
+            <a href="requests.html">Requests</a>
+
+            <a href="profile.html">Profile</a>
+
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">
+            Logout
+        </button>
+
+    </nav>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="profile-container">
+
+
+        <div class="page-header">
+
+            <p class="small-text">
+                YOUR ACCOUNT
+            </p>
+
+            <h1>
+                My Profile
+            </h1>
+
+            <p>
+                View your SkillSwap account information.
+            </p>
+
+        </div>
+
+
+        <!-- ================= PROFILE CARD ================= -->
+
+        <section class="profile-card">
+
+
+            <div class="profile-top">
+
+                <div id="profileAvatar" class="profile-avatar">
+                    R
+                </div>
+
+                <div>
+
+                    <h2 id="profileName">
+                        Student
+                    </h2>
+
+                    <p id="profileEmail">
+                        student@example.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= ACCOUNT INFO ================= -->
+
+            <div class="profile-info">
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Full Name
+                    </span>
+
+                    <span id="infoName" class="info-value">
+                        -
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Email
+                    </span>
+
+                    <span id="infoEmail" class="info-value">
+                        -
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Account ID
+                    </span>
+
+                    <span id="infoId" class="info-value">
+                        -
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= SKILLS SUMMARY ================= -->
+
+        <section class="skills-summary">
+
+            <div class="summary-card">
+
+                <h3>
+                    Skills I Teach
+                </h3>
+
+                <div id="teachSkills">
+                    Loading...
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <h3>
+                    Skills I Want to Learn
+                </h3>
+
+                <div id="learnSkills">
+                    Loading...
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="js/profile.js"></script>
+
+</body>
+
+</html>

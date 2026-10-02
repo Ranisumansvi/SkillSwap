@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Requests - SkillSwap</title>
+
+    <link rel="stylesheet" href="css/requests.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Skill<span>Swap</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="skills.html">My Skills</a>
+
+            <a href="matches.html">Matches</a>
+
+            <a href="requests.html">Requests</a>
+
+            <a href="profile.html">Profile</a>
+
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">
+            Logout
+        </button>
+
+    </nav>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="requests-container">
+
+
+        <div class="page-header">
+
+            <p class="small-text">
+                CONNECTIONS
+            </p>
+
+            <h1>
+                Exchange Requests
+            </h1>
+
+            <p>
+                Manage your incoming and outgoing skill exchange requests.
+            </p>
+
+        </div>
+
+
+        <!-- ================= RECEIVED ================= -->
+
+        <section class="request-section">
+
+            <h2>
+                Received Requests
+            </h2>
+
+            <div id="receivedRequests" class="requests-list">
+
+                <div class="loading">
+                    Loading requests...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SENT ================= -->
+
+        <section class="request-section">
+
+            <h2>
+                Sent Requests
+            </h2>
+
+            <div id="sentRequests" class="requests-list">
+
+                <div class="loading">
+                    Loading requests...
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="js/requests.js"></script>
+
+</body>
+
+</html>

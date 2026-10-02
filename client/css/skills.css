@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+    border-bottom: 1px solid #e5e7eb;
+    gap: 40px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #6c63ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    flex: 1;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #6c63ff;
+}
+
+.logout-btn {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* ================= MAIN ================= */
+
+.skills-container {
+    width: 86%;
+    max-width: 1100px;
+    margin: 45px auto;
+}
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.small-text {
+    color: #6c63ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.page-header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #6b7280;
+}
+
+
+/* ================= ADD SKILL ================= */
+
+.add-skill-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 35px;
+}
+
+.add-skill-card h2 {
+    margin-bottom: 25px;
+}
+
+#skillForm {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+}
+
+.add-btn {
+    padding: 12px 24px;
+    background: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.add-btn:hover {
+    background: #574fe8;
+}
+
+
+/* ================= MY SKILLS ================= */
+
+.my-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.skill-column {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+}
+
+.skill-column h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.skill-list {
+    min-height: 100px;
+}
+
+.empty-message {
+    color: #9ca3af;
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+
+/* ================= SKILL TAG ================= */
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #f0efff;
+    color: #574fe8;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 750px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .skills-container {
+        width: 92%;
+    }
+
+    #skillForm {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .my-skills {
+        grid-template-columns: 1fr;
+    }
+
+}

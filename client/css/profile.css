@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+    border-bottom: 1px solid #e5e7eb;
+    gap: 40px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #6c63ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    flex: 1;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #6c63ff;
+}
+
+.logout-btn {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: #574fe8;
+}
+
+
+/* ================= MAIN ================= */
+
+.profile-container {
+    width: 86%;
+    max-width: 1000px;
+    margin: 45px auto;
+}
+
+.page-header {
+    margin-bottom: 35px;
+}
+
+.small-text {
+    color: #6c63ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.page-header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+
+/* ================= PROFILE CARD ================= */
+
+.profile-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #6c63ff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.profile-top h2 {
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.profile-top p {
+    color: #6b7280;
+}
+
+
+/* ================= ACCOUNT INFO ================= */
+
+.profile-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 25px;
+}
+
+.info-item {
+    background: #f8f8ff;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.info-label {
+    display: block;
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.info-value {
+    font-weight: bold;
+    color: #1f2937;
+}
+
+
+/* ================= SKILLS SUMMARY ================= */
+
+.skills-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.summary-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 25px;
+}
+
+.summary-card h3 {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+
+/* ================= SKILL TAG ================= */
+
+.skill-tag {
+    display: inline-block;
+    background: #f0efff;
+    color: #574fe8;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 4px;
+}
+
+.empty-message {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 750px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .profile-container {
+        width: 92%;
+    }
+
+    .profile-info {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-summary {
+        grid-template-columns: 1fr;
+    }
+
+}
