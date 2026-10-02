@@ -22,7 +22,7 @@ skillForm.addEventListener("submit", async (e) => {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/skills/add",
+            "https://skillswap-api-js8z.onrender.com/api/skills/add",
             {
                 method: "POST",
 
@@ -81,7 +81,7 @@ async function loadSkills() {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/skills/user/${user.id}`,
+            `https://skillswap-api-js8z.onrender.com/api/skills/user/${user.id}`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`

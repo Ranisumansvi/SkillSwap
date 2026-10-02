@@ -18,7 +18,7 @@ async function loadMatches() {
         // ================= GET MY SKILLS =================
 
         const mySkillsResponse = await fetch(
-            `http://localhost:5000/api/skills/user/${user.id}`,
+            `https://skillswap-api-js8z.onrender.com/api/skills/user/${user.id}`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -41,7 +41,7 @@ async function loadMatches() {
         // ================= GET MATCHES =================
 
         const matchesResponse = await fetch(
-            `http://localhost:5000/api/matches/${user.id}`,
+            `https://skillswap-api-js8z.onrender.com/api/matches/${user.id}`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -88,7 +88,7 @@ async function loadMatches() {
         for (const match of matches) {
 
             const skillsResponse = await fetch(
-                `http://localhost:5000/api/skills/user/${match.id}`,
+                `https://skillswap-api-js8z.onrender.com/api/skills/user/${match.id}`,
                 {
                     headers: {
                         "Authorization": `Bearer ${token}`
@@ -250,7 +250,7 @@ async function sendRequest(matchId) {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/requests/send",
+            "https://skillswap-api-js8z.onrender.com/api/requests/send",
             {
                 method: "POST",
 

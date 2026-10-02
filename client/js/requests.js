@@ -16,7 +16,7 @@ async function loadReceivedRequests() {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/requests/received/${user.id}`,
+            `https://skillswap-api-js8z.onrender.com/api/requests/received/${user.id}`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -156,7 +156,7 @@ async function loadSentRequests() {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/requests/sent/${user.id}`,
+            `https://skillswap-api-js8z.onrender.com/api/requests/sent/${user.id}`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -259,7 +259,7 @@ async function updateRequest(requestId, status) {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/requests/update/${requestId}`,
+            `https://skillswap-api-js8z.onrender.com/api/requests/update/${requestId}`,
             {
                 method: "PUT",
 

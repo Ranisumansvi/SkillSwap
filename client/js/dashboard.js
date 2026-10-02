@@ -51,7 +51,7 @@ async function loadDashboard() {
         // ================= GET MY SKILLS =================
 
         const skillsResponse = await fetch(
-            `http://localhost:5000/api/skills/user/${user.id}`,
+            `https://skillswap-api-js8z.onrender.com/api/skills/user/${user.id}`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -94,7 +94,7 @@ async function loadDashboard() {
         // ================= GET MATCHES =================
 
         const matchesResponse = await fetch(
-            `http://localhost:5000/api/matches/${user.id}`,
+            `https://skillswap-api-js8z.onrender.com/api/matches/${user.id}`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -121,7 +121,7 @@ async function loadDashboard() {
         // ================= GET RECEIVED REQUESTS =================
 
         const receivedResponse = await fetch(
-            `http://localhost:5000/api/requests/received/${user.id}`,
+            `https://skillswap-api-js8z.onrender.com/api/requests/received/${user.id}`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -148,7 +148,7 @@ async function loadDashboard() {
         // ================= GET SENT REQUESTS =================
 
         const sentResponse = await fetch(
-            `http://localhost:5000/api/requests/sent/${user.id}`,
+            `https://skillswap-api-js8z.onrender.com/api/requests/sent/${user.id}`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`

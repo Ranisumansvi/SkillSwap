@@ -44,7 +44,7 @@ async function loadProfileSkills() {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/skills/user/${user.id}`,
+            `https://skillswap-api-js8z.onrender.com/api/skills/user/${user.id}`,
             {
                 headers: {
                     "Authorization": `Bearer ${token}`

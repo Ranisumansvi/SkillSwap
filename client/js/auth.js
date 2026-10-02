@@ -1,112 +1,154 @@
-// ================= REGISTER =================
+document.addEventListener("DOMContentLoaded", () => {
 
-const registerForm = document.getElementById("registerForm");
+    // ================= REGISTER =================
 
-if (registerForm) {
+    const registerForm = document.getElementById("registerForm");
 
-    registerForm.addEventListener("submit", async (e) => {
+    if (registerForm) {
 
-        e.preventDefault();
+        registerForm.addEventListener("submit", async (e) => {
 
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
+            e.preventDefault();
 
-        try {
+            const name =
+                document.getElementById("name").value.trim();
 
-            const response = await fetch("http://localhost:5000/api/auth/register", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    name: name,
-                    email: email,
-                    password: password
-                })
-            });
+            const email =
+                document.getElementById("email").value.trim();
 
-            const data = await response.json();
+            const password =
+                document.getElementById("password").value;
 
-            if (response.ok) {
+            console.log("Register button clicked");
 
-                alert("Account created successfully!");
+            try {
 
-                window.location.href = "login.html";
+                const response = await fetch(
+                    "https://skillswap-api-js8z.onrender.com/api/auth/register",
+                    {
+                        method: "POST",
 
-            } else {
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
 
-                alert(data.message);
+                        body: JSON.stringify({
+                            name: name,
+                            email: email,
+                            password: password
+                        })
+                    }
+                );
 
-            }
+                const data = await response.json();
 
-        } catch (error) {
+                console.log("Register response:", data);
 
-            console.error(error);
+                if (response.ok) {
 
-            alert("Server error. Please try again.");
+                    alert("Account created successfully!");
 
-        }
+                    window.location.href = "login.html";
 
-    });
+                } else {
 
-}
+                    alert(data.message || "Registration failed.");
 
+                }
 
-// ================= LOGIN =================
+            } catch (error) {
 
-const loginForm = document.getElementById("loginForm");
+                console.error("Register error:", error);
 
-if (loginForm) {
-
-    loginForm.addEventListener("submit", async (e) => {
-
-        e.preventDefault();
-
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-
-        try {
-
-            const response = await fetch("http://localhost:5000/api/auth/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    email: email,
-                    password: password
-                })
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-
-                // Save JWT token
-                localStorage.setItem("token", data.token);
-
-                // Save user information
-                localStorage.setItem("user", JSON.stringify(data.user));
-
-                alert("Login successful!");
-
-                window.location.href = "dashboard.html";
-
-            } else {
-
-                alert(data.message);
+                alert(
+                    "Unable to connect to SkillSwap server."
+                );
 
             }
 
-        } catch (error) {
+        });
 
-            console.error(error);
+    }
 
-            alert("Server error. Please try again.");
 
-        }
+    // ================= LOGIN =================
 
-    });
+    const loginForm = document.getElementById("loginForm");
 
-}
+    if (loginForm) {
+
+        loginForm.addEventListener("submit", async (e) => {
+
+            e.preventDefault();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const password =
+                document.getElementById("password").value;
+
+            console.log("Login button clicked");
+
+            try {
+
+                const response = await fetch(
+                    "https://skillswap-api-js8z.onrender.com/api/auth/login",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            email: email,
+                            password: password
+                        })
+                    }
+                );
+
+                const data = await response.json();
+
+                console.log("Login response:", data);
+
+                if (response.ok) {
+
+                    localStorage.setItem(
+                        "token",
+                        data.token
+                    );
+
+                    localStorage.setItem(
+                        "user",
+                        JSON.stringify(data.user)
+                    );
+
+                    alert("Login successful!");
+
+                    window.location.href =
+                        "dashboard.html";
+
+                } else {
+
+                    alert(
+                        data.message ||
+                        "Login failed."
+                    );
+
+                }
+
+            } catch (error) {
+
+                console.error("Login error:", error);
+
+                alert(
+                    "Unable to connect to SkillSwap server."
+                );
+
+            }
+
+        });
+
+    }
+
+});

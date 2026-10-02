@@ -1,4 +1,7 @@
 const mysql = require("mysql2");
+const fs = require("fs");
+const path = require("path");
+
 require("dotenv").config();
 
 const db = mysql.createConnection({
@@ -6,16 +9,27 @@ const db = mysql.createConnection({
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
-    port: process.env.DB_PORT
+    port: process.env.DB_PORT,
+
+    ssl: {
+        ca: fs.readFileSync(
+            path.join(__dirname, "../ca.pem")
+        )
+    }
 });
 
 db.connect((err) => {
     if (err) {
-        console.log("Database connection failed:", err.message);
+        console.log(
+            "Database connection failed:",
+            err.message
+        );
         return;
     }
 
-    console.log("MySQL database connected successfully");
+    console.log(
+        "Aiven MySQL database connected successfully"
+    );
 });
 
 module.exports = db;
